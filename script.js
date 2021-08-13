@@ -88,6 +88,9 @@
         var tiemposFila = tables[0].querySelectorAll("tbody tr");
         var tiempos = tiemposFila[1];
         var minutos = tiempos.querySelectorAll("td")[0].textContent.replace("'", '');
+        if(minutos.trim() == ""){
+            minutos = "LLEGANDO"
+        }
         console.log(minutos)
         return minutos;
     }
